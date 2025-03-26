@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Selecione um número</p>
+    <select id="tabuada_numero">
+   
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    </select>
+
+    <p>Digite o número que você quer que vá a tabuada</p>
+    <input type="number" id="numero_max">
+    <button onclick="calculoTabuada()">Ver tabuada</button>
+    <div id="div"></div>
+</body>
+</html>
+
+<script>
+
+function calculoTabuada() {
+    div.innerHTML=``
+    const numeroMin = Number(tabuada_numero.value)
+    const numeroMax = Number(numero_max.value)
+
+
+    for(var i = 1; i<=numeroMax; i++) {
+        div.innerHTML+= ` ${numeroMin} * ${i} = ${numeroMin*i} <br>`
+    }
+}
+
+
+</script>
+
+

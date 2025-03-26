@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Dorável</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+
+        <h2>🔢 Calculadora Dorável</h2>
+
+        <div class="input-grupo">
+            <label for="num1">1º Número:</label>
+            <input id="input-num1" type="number">
+        </div>
+        <div class="input-grupo">
+            <label for="num2">2º Número:</label>
+            <input id="input-num2"  type="number">
+        </div>
+
+        <div class="button-grupo">
+            <button id="btn-somar">➕ Somar</button>
+            <button id="btn-subtrair">➖ Subtrair</button>
+            <button id="btn-multiplicar">✖️ Multiplicar</button>
+            <button id="btn-dividir">➗ Dividir</button>
+        </div>
+
+        <section id="section-resultado"></section>
+
+        <section id="section-historico">
+            <h3 id="h3-historico">Histórico de operações</h3>
+            <div id="div-historico"></div>
+        </section>
+    </div>
+    
+  
+</body>
+</html>
+
+<script src="scripts.js"></script>

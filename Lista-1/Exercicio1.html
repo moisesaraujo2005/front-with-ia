@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira o valor da pizza</p>
+    <input type="number" id="valor_pizza"> <br>
+    <p>Quantidade de amigos que vão comer</p>
+    <input type="number" id="qtdAmigos"> <br>
+    <p>Insira o sabor da pizza</p>
+    <input type="text" id="sabor_pizza">
+    <button onclick="valor()">Ver valor por amigo</button>
+
+    <div id="div"></div>
+</body>
+</html>
+
+<script>
+
+function valor() {
+    const valorPizza = Number(valor_pizza.value);
+    const quantidadeAmigos =Number(qtdAmigos.value);
+    const saborPizza = sabor_pizza.value
+
+
+
+    const taxaEntregador = valorPizza*0.10;
+    const valorTotalPizza = valorPizza+taxaEntregador;
+    const valorPorAmigo = valorTotalPizza/quantidadeAmigos;
+
+    div.innerHTML = `Cada amigo vai colaborar com ${valorPorAmigo} para a pizza de ${saborPizza} `
+
+
+}
+
+
+</script>

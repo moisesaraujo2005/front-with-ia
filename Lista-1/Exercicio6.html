@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p>Nome musicais</p>
+<input type="text" id="nome_musical">
+<button onclick="cadastrarFilme()">Cadastrar</button> <br>
+<button onclick="exibirFilme()">Exibir</button>
+<p>De</p>
+<input type="number" id="numero_min">
+<p>Até</p>
+<input type="number" id="numero_max">
+
+<button onclick="filtrar()">Filtrar</button>
+<div id="div"></div>
+
+</body>
+</html>
+
+<script>
+
+var musicais = []
+
+function cadastrarFilme() {
+    let nomeMusical = nome_musical.value
+
+    musicais.push(nomeMusical);
+    
+}
+
+function exibirFilme() {
+div.innerHTML=``
+
+for (let index = 0; index < musicais.length; index++) {
+    const element = musicais[index];
+
+    div.innerHTML +=`${element} <br>`
+    
+}
+
+}
+
+function filtrar() {
+
+    const valorMin = Number(numero_min.value)
+    const valorMax = Number(numero_max.value)
+
+    for(var i = valorMin; i<valorMax; i++) {
+        if (musicais[i]) {
+            const element2 = musicais[i];
+            div.innerHTML += `${element2} <br>`;
+        }
+    }
+    
+}
+
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira a primeira nota</p>
+    <input type="number" id="primeira_nota"><br>
+    <p>Insira a segunda nota</p>
+    <input type="number" id="segunda_nota"><br>
+
+    <button onclick="media()">Ver média</button>
+    <div id="div"></div>
+</body>
+</html>
+
+<script>
+
+function media() {
+    const primeiraNota = Number(primeira_nota.value)
+    const segundaNota = Number(segunda_nota.value)
+
+    const mediaNota = (primeiraNota+segundaNota)/2
+
+    if(mediaNota >=6) {
+        div.innerHTML = `Parabéns, aprovado!`
+    }
+
+    else {
+        div.innerHTML=`Tente outra vez!`
+    }
+
+}
+
+
+</script>

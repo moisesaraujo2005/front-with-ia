@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nome do filme:</p>
+    <input type="text" id="nome_filme">
+    <button onclick="cadastrarFilme()">Cadastrar</button>
+    <div id="div" ></div>
+    
+</body>
+</html>
+
+<script>
+var filmes = []
+
+function cadastrarFilme() {
+    div.innerHTML=``
+    var nomeFilme = nome_filme.value
+
+    filmes.push(nomeFilme)
+
+    for (let index = 0; index < filmes.length; index++) {
+        const element = filmes[index];
+        console.log(index)
+
+        if(index % 2 == 0) {
+            div.innerHTML+=`<span style="color:red"> ${element} </span> <br>`
+        }
+
+        else {
+            div.innerHTML+=`<span style="color:blue"> ${element} </span> <br>`
+        }
+        
+    }
+}
+
+
+</script>

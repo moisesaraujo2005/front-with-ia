@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 08 - Desafio</title>
+</head>
+<body>
+
+    Informe um número positivo, que é o limite da contagem: <input type="text" id="numero_limite">
+    <br>
+    Informe um número para teste de divisibilidade, deva estar 1 e o número informado anteriormente:
+    <input type="text" id="numero_divisibilidade">
+
+    <br><br>
+
+    <button onclick="somar()">Somar Números</button>
+    <br>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+
+<script>
+    function somar(){
+        let numeroLimite = Number(numero_limite.value)
+        let numeroDivisibilidade = Number(numero_divisibilidade.value)
+
+        let soma = 0
+
+        if(numeroDivisibilidade >= 1 && numeroDivisibilidade <= numeroLimite){
+            for(var index = 1; index <= numeroLimite; index++){
+                if(index % numeroDivisibilidade == 0){
+                    div_msg.innerHTML += `${index}<br>`
+                    soma += index
+                }
+            }
+
+            div_msg.innerHTML += `Soma dos Múltiplos: ${soma}`
+        }else{
+            div_msg.innerHTML = "Tente!"
+        }
+    }
+</script>
